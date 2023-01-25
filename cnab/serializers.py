@@ -7,10 +7,13 @@ class CnabSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cnab
         fields = "__all__"
-        read_only_fields = ["id",]
+        read_only_fields = [
+            "id",
+            "type",
+        ]
+        extra_kwargs = {"type_number": {"write_only": True}}
 
     def create(self, validated_data):
-        type = validated_data.pop("type")
-        created_type, _ = Type.objects.get_or_create(**type)
+        type = Type.objects.get(type=validated_data["type_number"])
 
-        return Cnab.objects.create(**validated_data, type=created_type)
+        return Cnab.objects.create(**validated_data, type=type)

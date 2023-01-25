@@ -7,7 +7,7 @@ class TypeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Type
-        fields = ["id", "description", "nature", "signal"]
+        fields = ["id", "type", "description", "nature", "signal"]
         read_only_fields = ["id", "signal"]
 
     def get_signal(self, obj):

@@ -11,6 +11,7 @@ class Cnab(models.Model):
     value = models.DecimalField(max_digits=10, decimal_places=2)
     owner = models.TextField()
     store = models.TextField()
+    type_number = models.TextField(max_length=1)
 
     type = models.ForeignKey(
         "transactionsTypes.Type",

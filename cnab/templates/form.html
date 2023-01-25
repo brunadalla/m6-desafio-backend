@@ -1,0 +1,46 @@
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  "
+>
+  <p style="font-size: 50px">Upload Your File Here..</p>
+</div>
+<div
+  id="fileform"
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  "
+>
+  <form
+    method="post"
+    action="/api/cnab/"
+    enctype="multipart/form-data"
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    "
+  >
+    {% csrf_token %} {{ form }}
+    <button
+      type="submit"
+      style="
+        margin-top: 50px;
+        outline: none;
+        width: 100px;
+        height: 40px;
+        border-radius: 8px;
+      "
+      onmouseover="this.style.cursor='pointer'"
+    >
+      Submit
+    </button>
+  </form>
+</div>
