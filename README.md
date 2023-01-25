@@ -9,7 +9,9 @@ O objetivo desse projeto é desenvolver uma interface web que aceite upload de a
 
 ## Bibliotecas e Frameworks utilizadas:
 - Django;
-- Django-Rest-Framework.
+- Django-Rest-Framework;
+- uuid;
+- python-dotenv.
 
 ### Clonando o repositório: 
 1. Clique no botão verde escrito 'Code' acima e copie a chave SSH;
@@ -21,6 +23,6 @@ O objetivo desse projeto é desenvolver uma interface web que aceite upload de a
 2. Por fim, ainda no terminal, escreva `pip install -r requirements.txt` para instalar as dependências. 
 
 ### Setando variáveis e rodando o projeto localmente:
-1. Na pasta do projeto, crie uma copia do arquivo .env.example, mude o nome para .env e complete com as suas informações.
-2. Para rodar o servidor localmente, basta executar o comando `python manage.py runserver`.
+1. Na pasta do projeto, crie uma copia do arquivo .env.example, mude o nome para .env e complete com as suas informações;
+2. Para rodar o servidor localmente, basta executar o comando `python manage.py runserver`;
 3. Por fim, rode o comano `python manage.py create_default_types` para criar o valores default do banco de dados.
