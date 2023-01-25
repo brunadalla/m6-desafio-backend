@@ -23,3 +23,4 @@ O objetivo desse projeto é desenvolver uma interface web que aceite upload de a
 ### Setando variáveis e rodando o projeto localmente:
 1. Na pasta do projeto, crie uma copia do arquivo .env.example, mude o nome para .env e complete com as suas informações.
 2. Para rodar o servidor localmente, basta executar o comando `python manage.py runserver`.
+3. Por fim, rode o comano `python manage.py create_default_types` para criar o valores default do banco de dados.
