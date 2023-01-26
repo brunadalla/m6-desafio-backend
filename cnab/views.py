@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from rest_framework.parsers import MultiPartParser
-from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import CnabSerializer
 from .forms import form
