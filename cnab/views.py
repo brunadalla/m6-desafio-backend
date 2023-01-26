@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import CnabSerializer
 from .forms import form
+from .models import Cnab
 
 
 class cnab_view(APIView):
@@ -28,7 +29,8 @@ class cnab_view(APIView):
             serializer.is_valid(raise_exception=True)
             serializer.save()
 
-        return render(request, "form.html", {"form": form})
+        data = Cnab.objects.all()
+        return render(request, "results.html", {"data": data})
 
     def get(self, request):
         return render(request, "form.html", {"form": form})

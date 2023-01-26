@@ -1,0 +1,26 @@
+<div>
+  <ul
+    style="
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      aspect-ratio: 5/6;
+      gap: 15px;
+    "
+  >
+    {% for i in data %}
+    <li style="padding: 10px; border-radius: 8px; background-color: #b5e48c">
+      <p><b> Tipo: </b> {{ i.type.description }}</p>
+      <p><b> Data: </b> {{ i.date }}</p>
+      <p><b> Valor: </b> {{ i.value }}</p>
+      <p><b> CPF: </b> {{ i.cpf }}</p>
+      <p><b> Cartão: </b> {{ i.card }}</p>
+      <p><b> Hora: </b> {{ i.time }}</p>
+      <p><b> Dono da Loja: </b> {{ i.owner }}</p>
+      <p><b> Nome da Loja: </b> {{ i.store }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
